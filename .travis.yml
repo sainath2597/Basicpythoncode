@@ -2,6 +2,8 @@ language: python
 python:
   - "3.8"
 cache: pip
+branches:
+  only:
+    - master
 script:
-  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./travis/run_on_pull_requests; fi'
   - 'python test_cal.py'
